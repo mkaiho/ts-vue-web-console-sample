@@ -1,0 +1,15 @@
+version: "3"
+services:
+  front-app:
+    image: node:fermium-buster
+    container_name: ts-vue-web-console-sample
+    working_dir: /home/ts-vue-web-console-sample
+    ports:
+      - 3000:3000
+    tty: true
+    volumes:
+      - .:/home/ts-vue-web-console-sample
+      - node_modules_volume:/home/ts-vue-web-console-sample/node_modules
+
+volumes:
+  node_modules_volume:
