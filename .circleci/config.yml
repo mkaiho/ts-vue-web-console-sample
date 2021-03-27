@@ -9,3 +9,4 @@ workflows:
       - node/test:
           version: 14.16.0
           pkg-manager: yarn
+          run-command: test:unit --coverage
