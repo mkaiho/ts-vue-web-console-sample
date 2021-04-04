@@ -10,6 +10,12 @@ services:
     volumes:
       - .:/home/ts-vue-web-console-sample
       - node_modules_volume:/home/ts-vue-web-console-sample/node_modules
+    networks:
+      - web-console-sample
 
 volumes:
   node_modules_volume:
+
+networks:
+  web-console-sample:
+    external: true
